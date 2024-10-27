@@ -1,17 +1,17 @@
-@use 'base';
-@use 'variables';
-@use 'reset';
-@use 'classes';
-@use 'utils';
-@use 'media-queries' as *;
+@use "base";
+@use "variables";
+@use "reset";
+@use "classes";
+@use "utils";
+@use "media-queries" as *;
 
 .container {
   min-height: 100vh;
   display: grid;
   grid:
-    'header' auto
-    'content' 1fr
-    'footer' auto /
+    "header" auto
+    "content" 1fr
+    "footer" auto /
     auto;
 }
 
@@ -33,10 +33,10 @@ header {
   .header-menu {
     position: relative;
     ul {
+      display: flex;
       @include xs {
         display: none;
       }
-      display: flex;
       li {
         .header-nav {
           font-size: 1.8rem;
