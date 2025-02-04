@@ -51,11 +51,6 @@ const fetchArticle = async () => {
   try {
     const response = await fetch('https://restapi.fr/api/article');
     let articles = await response.json();
-    // Restapi retourne un objet s'il n'y a qu'un seul article
-    // nous devons donc le transformer en tableau :
-    if (!Array.isArray(articles)) {
-      articles = [articles];
-    }
     createArticles(articles);
   } catch (e) {
     console.log('e : ', e);

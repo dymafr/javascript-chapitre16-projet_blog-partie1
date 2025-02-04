@@ -3,7 +3,6 @@ import './form.scss';
 
 const form = document.querySelector('form');
 const errorElement = document.querySelector('#errors');
-let errors = [];
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
@@ -28,6 +27,7 @@ form.addEventListener('submit', async (event) => {
 });
 
 const formIsValid = (article) => {
+  let errors = [];
   if (
     !article.author ||
     !article.category ||
