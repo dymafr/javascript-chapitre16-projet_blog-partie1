@@ -4,15 +4,19 @@
   "description": "",
   "type": "module",
   "scripts": {
+    "dev": "vite",
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.83.4",
-    "vite": "^6.0.11"
+    "sass": "^1.98.0",
+    "vite": "^8.0.3"
   }
 }
