@@ -1,11 +1,10 @@
 {
-  "name": "dyma",
+  "name": "blog-project",
   "version": "1.0.0",
   "description": "",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -16,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.98.0",
-    "vite": "^8.0.3"
+    "sass-embedded": "^1.100.0",
+    "vite": "^8.1.5"
   }
 }

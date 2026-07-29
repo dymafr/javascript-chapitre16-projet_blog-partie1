@@ -11,20 +11,35 @@
   padding: 1rem 2rem;
   font-weight: 700;
   cursor: pointer;
-  transition: box-shadow 0.2s;
+  transition:
+    box-shadow 0.2s,
+    outline-offset 0.2s;
+
   &:hover {
     box-shadow: var(--box-shadow);
-    transition: box-shadow 0.2s;
   }
+
+  &:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 3px;
+  }
+
+  &:disabled {
+    cursor: wait;
+    opacity: 0.65;
+  }
+
   &-primary {
     background: var(--primary);
     color: white;
   }
+
   &-secondary {
     border: 1px solid var(--primary);
     background: white;
     color: var(--primary);
   }
+
   &-danger {
     border: 1px solid var(--error);
     background: white;
@@ -34,6 +49,13 @@
 
 .text {
   &-error {
+    margin-bottom: 2rem;
     color: var(--error);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
   }
 }
