@@ -1,42 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Accueil | Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Muli:300,400,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/83f4286022.js"
-      crossorigin="anonymous"
-    ></script>
     <script src="./index.js" type="module"></script>
-    <title>Blog</title>
   </head>
   <body>
     <div class="container">
       <header>
-        <a class="header-brand" href="/">Blog</a>
+        <a class="header-brand" href="./index.html">Blog</a>
         <div class="header-menu">
-          <ul>
-            <li>
-              <a href="./index.html" class="header-nav active">Accueil</a>
-            </li>
-            <li>
-              <a href="./form/form.html" class="header-nav">Créer un article</a>
-            </li>
-          </ul>
-          <div class="header-menu-icon">
-            <i class="fas fa-bars"></i>
-          </div>
+          <button
+            class="header-menu-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="main-navigation"
+          >
+            <span aria-hidden="true">☰</span>
+            <span class="visually-hidden">Ouvrir le menu</span>
+          </button>
+          <nav id="main-navigation" aria-label="Navigation principale">
+            <ul>
+              <li>
+                <a
+                  href="./index.html"
+                  class="header-nav active"
+                  aria-current="page"
+                >
+                  Accueil
+                </a>
+              </li>
+              <li>
+                <a href="./form/form.html" class="header-nav">
+                  Créer un article
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </header>
-      <div class="content">
-        <div class="articles-container"></div>
-      </div>
-      <footer>© blog</footer>
+
+      <main class="content">
+        <section class="articles-container" aria-labelledby="articles-title">
+          <h1 id="articles-title" class="title-underline">Articles</h1>
+          <p class="articles-status" role="status"></p>
+          <div class="articles-list"></div>
+        </section>
+      </main>
+
+      <footer><small>&copy; Blog</small></footer>
     </div>
   </body>
 </html>
